@@ -3,10 +3,16 @@
   <head></head>
   <body>
     <script>
-      function convertToFahrenheit(celsius) {
-        return (celsius * 9 / 5) + 32;
+      function convert(degree,unit){
+        if (unit === 'c'){
+          return (celcius*9/5)+32
+        }else if(unit === 'f'){
+          return(fahrenheit-32)*5/9
+
+        }
+    
       }
-      console.log(convertToFahrenheit(25));
-    </script>
+      
+      </script>
   </body>
 </html>
