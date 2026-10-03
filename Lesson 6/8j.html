@@ -11,11 +11,24 @@
     ">tails</button>
 
     <script>
-      function playGame(guess) {
+         let score={
+            Wins:0,
+            Loses:0
+        };
+       
+      function playGame(guess,Wins,Loses) {
         const randomNumber = Math.random();
         const result = randomNumber < 0.5 ? 'heads' : 'tails';
+       console.log(guess === result ? 'You win!' : 'You lose!');
+        if (guess===result){
+            score.Wins++;
 
-        console.log(guess === result ? 'You win!' : 'You lose!');
+        }else{
+            score.Loses++;
+        }       console.log(score);
+
+        
+        
       }
     </script>
   </body>
