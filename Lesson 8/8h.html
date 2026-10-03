@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head></head>
@@ -66,8 +67,8 @@
       ">.</button>
 
       <button onclick="
-        
         calculation = eval(calculation);
+        localStorage.setItem('calculation', calculation);
         console.log(calculation);
       ">=</button>
 
@@ -79,15 +80,19 @@
     <p>
       <button onclick="
         calculation = '';
+        localStorage.setItem('calculation', calculation);
         console.log(calculation);
       ">Clear</button>
     </p>
 
     <script>
-      let calculation = '';
+      let calculation = localStorage.getItem('calculation') || '';
 
       function updateCalculation(value) {
         calculation += value;
+
+        localStorage.setItem('calculation', calculation);
+
         console.log(calculation);
       }
     </script>
